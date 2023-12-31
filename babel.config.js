@@ -18,7 +18,8 @@ module.exports = {
           "@mealsettings": "./src/screens/mealsettings",
           "@navigation": "./src/navigation",
           "@context": "./src/context",
-          "@api": "./src/api"
+          "@api": "./src/api",
+          "@images/*": ["./src/images/*"]
         },
       },
     ],

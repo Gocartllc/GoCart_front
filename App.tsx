@@ -8,7 +8,7 @@ import { StatusBar } from 'react-native';
 
 const App: React.FC = () => {
   return (
-    <><StatusBar backgroundColor="#fff" barStyle="light-content" />
+    <>
     <SelectedMealsProvider>
       <GestureHandlerRootView style={{ flex: 1 }}>
         <NavigationContainer>

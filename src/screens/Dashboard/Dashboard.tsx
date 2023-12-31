@@ -1,6 +1,8 @@
 import OpportunityCard from '@components/OpportunityCard';
 import React, { useState } from 'react';
-import { SafeAreaView, ScrollView, StatusBar, View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { ScrollView, StatusBar, View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
+
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import { styles, accountStyles, badgeStyles, ICON_COLORS } from './Dashboard.styles';
 import { Booking, Opportunity } from './Dashboard.types';
@@ -36,18 +38,7 @@ const Dashboard: React.FC = () => {
   ];
 
   return (
-    <SafeAreaView style={styles.safeArea}>
     <ScrollView style={styles.container}>
-      <View style={styles.header}>
-        <MaterialCommunityIcons name="menu" size={30} color="#2dd881" />
-        <View style={styles.headerTitleContainer}>
-          <MaterialCommunityIcons name="compass-outline" size={30} color="#2dd881" />
-          <Text style={styles.headerTitle}>GoCart</Text>
-        </View>
-        <MaterialCommunityIcons name="bell" size={30} color="#2dd881" />
-      </View>
-
-    
 
       <View style={[accountStyles.header, accountStyles.avatarShadow]}>
   <Avatar
@@ -89,6 +80,40 @@ const Dashboard: React.FC = () => {
   </TouchableOpacity>
 </View>
 
+<Text style={styles.discoverMoreTitle}>Discover More</Text>
+
+<TouchableOpacity style={styles.articleCard}>
+  <View style={styles.articleImageContainer}>
+    <Image
+      source={require('../../images/drinking_water.jpg')}
+      style={styles.articleImage}
+    />
+  </View>
+  <View style={styles.articleContent}>
+    <Text style={styles.articleTitle}>How Much Water do you need?</Text>
+    <View style={styles.interactions}>
+      <Text style={styles.interactionText}>❤️ 11k</Text>
+    </View>
+  </View>
+</TouchableOpacity>
+
+
+<TouchableOpacity style={styles.articleCard}>
+  <View style={styles.articleImageContainer}>
+    <Image
+        source={ require('../../images/woman_exercisin.jpg')}
+        style={styles.articleImage}
+    />
+  </View>
+  <View style={styles.articleContent}>
+    <Text style={styles.articleTitle}>How Much Water do you need?</Text>
+    <View style={styles.interactions}>
+      <Text style={styles.interactionText}>❤️ 11k</Text>
+    </View>
+  </View>
+</TouchableOpacity>
+
+
 
    
       <View style={styles.cardsContainer}>
@@ -123,7 +148,6 @@ const Dashboard: React.FC = () => {
  </View>
 
     </ScrollView>
-   </SafeAreaView>
   );
 };
 

@@ -96,7 +96,7 @@ export const styles = StyleSheet.create({
       },
         safeArea: {
         flex: 1,
-        backgroundColor: '#fff', // or any other background color you want for the safe area
+        backgroundColor: 'red', // or any other background color you want for the safe area
       },
       summaryContainer: {
         flexDirection: 'row',
@@ -115,14 +115,12 @@ export const styles = StyleSheet.create({
       },
        container: {
         flex: 1,
-        backgroundColor: '#fff',
+        backgroundColor: '#F1F6F7',
       },
       header: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        paddingHorizontal: 10,
-        paddingTop: 10,
+        alignItems: 'flex-start',
+        alignSelf:'flex-end',
+
       },
       headerTitleContainer: {
         flexDirection: 'row',
@@ -179,8 +177,66 @@ export const styles = StyleSheet.create({
         fontSize: 16,
         color: 'black',
       },
-      });
-
+      discoverMoreTitle: {
+        fontSize: 20,
+        fontWeight: 'bold',
+        color: '#2E384D',
+        alignSelf: 'flex-start',
+        marginLeft: 15,
+        marginTop: 30,
+      },
+      articleContainer: {
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        marginTop: 15,
+      },
+      articleCard: {
+        flexDirection: 'row',
+        backgroundColor: '#fff',
+        borderRadius: 15,
+        overflow: 'hidden',
+        margin: 20,
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 4 },
+        shadowOpacity: 0.3,
+        shadowRadius: 5,
+        elevation: 6,
+        alignItems: 'center',
+      },
+      articleImageContainer: {
+        width: 90, // Smaller width for the image container
+        height: 90, // Smaller height to match the width
+        borderRadius: 15, // Fully rounded corners
+        overflow: 'hidden',
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginRight: 10,
+      },
+      articleImage: {
+        width: '88%', // The image will fill the container
+        height: '88%',
+        resizeMode: 'cover', // Ensures the image covers the container space
+        borderRadius: 15 // Fully rounded corners
+      },   
+      articleContent: {
+        flex: 1,
+        padding: 10,
+      },
+      articleTitle: {
+        fontSize: 16,
+        fontWeight: 'bold',
+        color: '#2E384D',
+      },
+      interactions: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        marginTop: 10,
+      },
+      interactionText: {
+        fontSize: 14,
+        color: '#2E384D',
+      },
+    });
       
 
 
