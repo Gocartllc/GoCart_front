@@ -1,0 +1,29 @@
+{
+  "extends": "@tsconfig/react-native/tsconfig.json",     /* Recommended React Native TSConfig base */
+  "compilerOptions": {
+    "jsx": "react",
+    /* Visit https://aka.ms/tsconfig.json to read more about this file */
+
+    /* Completeness */
+    "skipLibCheck": true   ,                              /* Skip type checking all .d.ts files. */
+    
+    /* Absolute imports */
+    "baseUrl": "./",
+    "paths": {
+      "@screens/*": ["./src/screens/*"],
+      "@components/*": ["./src/components/*"],
+      "@features/*": ["./src/types/*"],
+      "@services/*": ["./src/assets/*"],
+      "@assets/*": ["./src/assets/*"],
+      "@hooks/*": ["./src/api/*"],
+      "@typedefs/*": ["./src/context/*"],
+      "@utils/*": ["typing/*"],
+      "@mealsettings/*": ["./src/screens/mealsettings/*"],
+      "@navigation/*": ["./src/navigation/*"],
+      "@context/*": ["./src/context/*"],
+      "@api/*": ["./src/api/*"]
+    },
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true
+  }
+}
