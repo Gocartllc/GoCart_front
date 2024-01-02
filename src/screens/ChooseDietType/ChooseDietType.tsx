@@ -48,7 +48,7 @@ const ChooseDietType: React.FC<ChooseDietTypeProps> = ({ navigation, route }) =>
         />
         <Image source={require('@assets/images/balanced-diet.png')} style={styles.backgroundimg} />
         <PremiumButton
-          title="Lets Choose your Meal Settings"
+          title="Continue"
           onPress={() => navigation.navigate('MealOptions')}
           color="#f71735"
         />

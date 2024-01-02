@@ -21,7 +21,7 @@ import { StackNavigationProp } from '@react-navigation/stack';
 
 
 type DashboardProps = {
-  navigation: StackNavigationProp<RootStackParamList, 'Dashboard'>;
+  navigation: StackNavigationProp<RootStackParamList, 'MainTab'>;
 };
 
 
@@ -56,7 +56,7 @@ const Dashboard = ({ navigation}: DashboardProps): React.JSX.Element => {
         <AntDesign name="setting" size={30} color="#4f5d75"/>
       </TouchableOpacity>
       <View style={{bottom:10, paddingBottom:37}}>
-  <StartButton title={"New Plan"} onPress={() => navigation.navigate('ChooseDietType')}/>
+  <StartButton title={"New Plan"} onPress={() => navigation.navigate('StoreSelectionUI')}/>
 </View>
     <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
   <TouchableOpacity style={badgeStyles.badgeContainer}>
