@@ -2,7 +2,7 @@
 
 import { RouteProp } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
-import { RootStackParamList } from '@navigation/AppNavigator'; // Adjust the import path as needed
+import { RootStackParamList } from '@navigation/navigationStacktypes'; // Adjust the import path as needed
 
 type LunchScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Lunch'>;
 type LunchScreenRouteProp = RouteProp<RootStackParamList, 'Lunch'>;

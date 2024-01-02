@@ -2,7 +2,7 @@
 
 import { RouteProp } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
-import { RootStackParamList } from '@navigation/AppNavigator';
+import { RootStackParamList } from '@navigation/navigationStacktypes';
 
 type DinnerScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Dinner'>;
 type DinnerScreenRouteProp = RouteProp<RootStackParamList, 'Dinner'>;

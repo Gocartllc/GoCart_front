@@ -9,7 +9,7 @@ import Swiper from '@components/Swiper';
 import { OnboardingProps } from './Onboarding.types';
 import { Button } from 'react-native';
 import { StackNavigationProp } from '@react-navigation/stack';
-import { RootStackParamList } from '@navigation/AppNavigator';
+import { RootStackParamList } from '@navigation/navigationStacktypes';
 import { RouteProp } from '@react-navigation/native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
@@ -17,26 +17,14 @@ type OnboardingNavigationProp = StackNavigationProp<RootStackParamList, 'Onboard
 
 type Props = {
   navigation: OnboardingNavigationProp;
-  route: RouteProp<RootStackParamList, 'Onboarding'>;
+  route: RouteProp<RootStackParamList, 'MainTab'>;
 };
 
 export default class Onboarding extends Component<Props> {
 
-  handleNavigate = () => {
-    this.props.navigation.navigate('Dashboard');
-  };
-
   handleNavigateToStoreSelection = () => {
-    this.props.navigation.navigate('Dashboard');
+    this.props.navigation.navigate('MainTab');
   };
-
-  renderLastSlideButton = () => (
-    <Button
-      title="Go to Store Selection"
-      onPress={this.handleNavigate}
-      color="#FFFFFF"
-    />
-  );
 
   render() {
     return (

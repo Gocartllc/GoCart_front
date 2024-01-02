@@ -1,7 +1,7 @@
 // StoreSelectionUI.types.ts
 
 import { StackNavigationProp } from '@react-navigation/stack';
-import { RootStackParamList } from '@navigation/AppNavigator'; // Adjust the import path as needed
+import { RootStackParamList } from '@navigation/navigationStacktypes'; // Adjust the import path as needed
 import { RouteProp } from '@react-navigation/native';
 
 export interface Store {

@@ -52,6 +52,19 @@ export const badgeStyles = StyleSheet.create({
 
 
 export const styles = StyleSheet.create({
+  settingsIcon: {
+    position: 'absolute', // Position the icon over the other content
+    top: 55, // Adjust as needed
+    right: 25, // Adjust as needed
+    zIndex: 10, // Make sure the icon floats above other elements
+  },
+  progressCardsContainer: {
+    flexDirection: 'row',
+    justifyContent: 'center', // Center the cards
+    alignItems: 'center',
+    paddingTop: 29, // This will add space below the "Today's Goals" title
+    paddingBottom: 20, // This adds some padding below the cards before the next section
+  },
     sectionBackground: {
         backgroundColor: '#1a1a1a',
         borderRadius: 10,
@@ -233,7 +246,7 @@ export const styles = StyleSheet.create({
         marginTop: 10,
       },
       interactionText: {
-        fontSize: 14,
+        fontSize: 16,
         color: '#2E384D',
       },
     });
@@ -298,7 +311,7 @@ export const styles = StyleSheet.create({
           paddingVertical: 20,
           fontSize: 35,
           fontWeight: 'bold',
-          color:'#2dd881'
+          color:'#4f5d75'
         },
         rating:{
           fontSize: 16,

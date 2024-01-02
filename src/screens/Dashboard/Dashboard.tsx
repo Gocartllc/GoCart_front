@@ -10,6 +10,19 @@ import { Avatar } from '@rneui/themed';
 import Entypo from 'react-native-vector-icons/Entypo';
 import Fontisto from 'react-native-vector-icons/Fontisto';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+import ProgressCardPie from '@components/ProgressCardPie';
+import ProgressCard from '@components/ProgressCard';
+import StartButton from '@components/StartButton/StartButton';
+import AntDesign from 'react-native-vector-icons/AntDesign'; // Import AntDesign
+import { RootStackParamList } from '@navigation/navigationStacktypes';
+import { StackNavigationProp } from '@react-navigation/stack';
+
+
+
+type DashboardProps = {
+  navigation: StackNavigationProp<RootStackParamList, 'Dashboard'>;
+};
 
 
 const opportunities: Opportunity[] = [
@@ -27,7 +40,7 @@ const bookings: Booking[] = [
 ];
 
 
-const Dashboard: React.FC = () => {
+const Dashboard = ({ navigation}: DashboardProps): React.JSX.Element => {
   const [selectedTab, setSelectedTab] = useState('summary');
   const totalBudget = 900;
   const spentAmount = 100.00;
@@ -39,22 +52,13 @@ const Dashboard: React.FC = () => {
 
   return (
     <ScrollView style={styles.container}>
-
-      <View style={[accountStyles.header, accountStyles.avatarShadow]}>
-  <Avatar
-    source={{
-      uri: 'https://images.unsplash.com/photo-1559526323-cb2f2fe2591b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80'
-    }}
-    size={110}
-    rounded
-    containerStyle={{
-    }}
-  />
-  <Text style={accountStyles.text}>
-    John Brown
-  </Text>
+      <TouchableOpacity style={styles.settingsIcon}>
+        <AntDesign name="setting" size={30} color="#4f5d75"/>
+      </TouchableOpacity>
+      <View style={{bottom:10, paddingBottom:37}}>
+  <StartButton title={"New Plan"} onPress={() => navigation.navigate('ChooseDietType')}/>
 </View>
-    <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
+    <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
   <TouchableOpacity style={badgeStyles.badgeContainer}>
     <View style={[badgeStyles.iconCircle, { backgroundColor: ICON_COLORS.purple }]}>
       <Entypo name={'price-ribbon'} size={20} color={'#FFFFFF'}/>
@@ -75,10 +79,16 @@ const Dashboard: React.FC = () => {
     <View style={[badgeStyles.iconCircle, { backgroundColor: ICON_COLORS.yellow }]}>
       <FontAwesome name={'heartbeat'} size={20} color={'#FFFFFF'}/>
     </View>
-    <Text style={badgeStyles.badgeNumber}>135</Text>
-    <Text style={badgeStyles.badgeText}>Health Points</Text>
+    <Text style={badgeStyles.badgeNumber}>92</Text>
+    <Text style={badgeStyles.badgeText}>Health Score</Text>
   </TouchableOpacity>
 </View>
+
+<Text style={styles.discoverMoreTitle}>Today's Goals</Text>
+<View style={styles.progressCardsContainer}>
+      <ProgressCardPie title="Exercise" minutes={40} goalPercentage={60}/>
+      <ProgressCard title="Calories" value={500} limit={1200} />
+    </View>
 
 <Text style={styles.discoverMoreTitle}>Discover More</Text>
 
@@ -92,7 +102,7 @@ const Dashboard: React.FC = () => {
   <View style={styles.articleContent}>
     <Text style={styles.articleTitle}>How Much Water do you need?</Text>
     <View style={styles.interactions}>
-      <Text style={styles.interactionText}>❤️ 11k</Text>
+      <Text style={styles.interactionText}><Ionicons name={"heart"} size={28} color={"#2dd881"} /> 5k</Text>
     </View>
   </View>
 </TouchableOpacity>
@@ -108,27 +118,14 @@ const Dashboard: React.FC = () => {
   <View style={styles.articleContent}>
     <Text style={styles.articleTitle}>How Much Water do you need?</Text>
     <View style={styles.interactions}>
-      <Text style={styles.interactionText}>❤️ 11k</Text>
+    <Text style={styles.interactionText}><Ionicons name={"heart"} size={28} color={"#2dd881"} /> 5k</Text>
     </View>
   </View>
 </TouchableOpacity>
 
 
 
-   
-      <View style={styles.cardsContainer}>
-        {opportunities.map((item, index) => (
-          <OpportunityCard
-            key={index}
-            title={item.title}
-            value={(item.title == 'Shopping Cart') ?  item.value + ' items': item.value}
-            trend={item.trend}
-            trendPercentage={item.trendPercentage}
-            fontaweicon={item.fontaweicon}
-            ionicon={item.ionicon}
-          />
-        ))}
-      </View>
+  
 
 <View style={{paddingTop:50}}>
 
@@ -136,13 +133,6 @@ const Dashboard: React.FC = () => {
         <Text style={styles.subtitle}>Your Breakfast for Today:</Text>
           <Text style={styles.content}>
              Fried Rice with Honey Seared Tofu
-          </Text>
-      </TouchableOpacity>
-
-       <TouchableOpacity style={styles.section} onPress={() => console.log("Navigate to the article")}>
-        <Text style={styles.subtitle}>Health fact of the Day:</Text>
-          <Text style={styles.content}>
-            Try to drink half your body weight in water.
           </Text>
       </TouchableOpacity>
  </View>
