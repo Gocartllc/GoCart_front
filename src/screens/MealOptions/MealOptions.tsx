@@ -61,7 +61,7 @@ const MealOptions: React.FC<MealOptionsScreenProps> = ({ navigation }) => {
         <PremiumButton
           title="Plan your meals"
           onPress={navigateToFirstSelectedMeal}
-          color="#f71735"
+          color="#2dd881"
         />
       </View>
     </View>

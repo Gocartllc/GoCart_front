@@ -4,7 +4,7 @@ import { BottomTabNavigationProp } from '@react-navigation/bottom-tabs';
 export type TabParamList = {
   Home: undefined;
   Profile: undefined;
-  ShoppingCart: undefined;
+  Shopping: undefined;
   HealthStats: undefined;
   // Add other screens as needed
 };

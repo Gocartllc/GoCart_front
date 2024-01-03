@@ -1,7 +1,7 @@
 export type RootStackParamList = {
     Onboarding: any;  
     StoreSelectionUI: { selectedMeals: { [key: string]: boolean } } | undefined;
-    ChooseDietType: undefined;
+    ChooseDietType: undefined | { selectedMeals: { [key: string]: boolean } };
     GenerateMeals: undefined;
     MealOptions: undefined;
     Breakfast: { selectedMeals: { [key: string]: boolean } };

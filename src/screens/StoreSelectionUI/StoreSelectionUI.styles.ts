@@ -60,6 +60,6 @@ export const styles = StyleSheet.create({
       marginBottom: 10,
       marginTop: 90,
       top:-45,
-      color: 'black',
+      color: '#353e4e',
     }
   });

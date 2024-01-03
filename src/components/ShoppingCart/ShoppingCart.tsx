@@ -1,6 +1,6 @@
 // ShoppingCart.tsx
 import React from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
+import { View, Text, TouchableOpacity, Image } from 'react-native';
 import { Props } from './ShoppingCart.types';
 import { styles } from './ShoppingCart.styles';
 
@@ -9,7 +9,6 @@ const ShoppingCart: React.FC<Props> = ({
   onEdit,
   onRepeat,
   onPay,
-  navigation,
 }) => {
   // Calculate the total amount
   const total = items.reduce(
@@ -40,23 +39,18 @@ const ShoppingCart: React.FC<Props> = ({
     <View style={styles.container}>
       {/* Header */}
       <View style={styles.header}>
-        <TouchableOpacity 
-          style={styles.backButton}
-          onPress={() => navigation.goBack()}
-        >
-          <Text style={styles.backText}>&lt;</Text>
-        </TouchableOpacity>
         <Text style={styles.title}>My cart</Text>
       </View>
 
       {/* Items */}
       <View style={styles.items}>
         {items.map((item, index) => (
-          <View key={index} style={styles.item}>
-            <Text style={styles.itemName}>{item.name}</Text>
-            <Text style={styles.itemPrice}>
-              ${item.price.toFixed(2)} - {item.quantity} items
-            </Text>
+          <View key={index} style={styles.itemRow}>
+            <Image source={{ uri: 'placeholder-image-url' }} style={styles.itemImage} />
+            <View style={styles.itemDetails}>
+              <Text style={styles.itemName}>{item.name}</Text>
+              <Text style={styles.itemPrice}>${item.price.toFixed(2)} - {item.quantity} items</Text>
+            </View>
             <TouchableOpacity
               style={styles.editButton}
               onPress={() => handleEdit(index)}

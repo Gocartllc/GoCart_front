@@ -12,6 +12,7 @@ export const styles = StyleSheet.create({
     fontSize: 22,
     fontWeight: 'bold',
     marginBottom: 50,
+    color:"#353e4e"
   },
   pickerContainer: {
     height: 40,

@@ -11,7 +11,7 @@ export const styles = StyleSheet.create({
   title: {
     fontSize: 26,
     fontWeight: 'bold',
-    color: '#333', // Dark text for contrast
+    color: '#353e4e', // Dark text for contrast
     marginBottom: 30,
     marginTop:70
   },

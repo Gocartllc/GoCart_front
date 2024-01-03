@@ -26,7 +26,7 @@ const PremiumTextField: React.FC<PremiumTextFieldProps> = ({ placeholder, iconNa
       <MaterialCommunityIcons
         name="numeric"
         size={24}
-        color={isFocused ? '#f4511e' : '#aaa'}
+        color={isFocused ? '#2dd881' : '#aaa'}
         style={styles.icon}
       />
       <TextInput

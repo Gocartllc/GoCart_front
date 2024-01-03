@@ -84,7 +84,7 @@ const SubmitPage: React.FC = () => {
     <PremiumButton
     title="Generate my Meals"
     onPress={() => handleSubmit()} // Wrap handleSubmit in an anonymous function
-    color="#f71735"
+    color="#2dd881"
     />
    </View>
 

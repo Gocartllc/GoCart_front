@@ -50,7 +50,7 @@ const ChooseDietType: React.FC<ChooseDietTypeProps> = ({ navigation, route }) =>
         <PremiumButton
           title="Continue"
           onPress={() => navigation.navigate('MealOptions')}
-          color="#f71735"
+          color="#2dd881"
         />
       </View>
     </View>

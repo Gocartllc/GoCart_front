@@ -9,7 +9,8 @@ export const styles = StyleSheet.create({
     header: {
       flexDirection: 'row',
       alignItems: 'center',
-      padding: 16,
+      paddingTop:70,
+      padding: 10,
       borderBottomWidth: 1,
       borderBottomColor: '#eee',
     },
@@ -52,7 +53,7 @@ export const styles = StyleSheet.create({
       flex: 1,
       fontSize: 16,
       color: '#333',
-      textAlign: 'right',
+      textAlign: 'left',
     },
     editButton: {
       width: 64,
@@ -116,6 +117,22 @@ export const styles = StyleSheet.create({
       fontWeight: 'bold',
       color: '#333',
     },
+    
+    itemRow: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      marginBottom: 16,
+    },
+    itemDetails: {
+      flex: 1,
+      marginLeft: 8,
+    },
+    itemImage: {
+      width: 50, // adjust size as needed
+      height: 50, // adjust size as needed
+      borderRadius: 25,
+      backgroundColor: '#f0f0f0', // placeholder background color
+    }
   });
   
   

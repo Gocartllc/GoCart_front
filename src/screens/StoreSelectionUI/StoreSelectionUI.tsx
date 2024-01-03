@@ -66,7 +66,7 @@ const StoreSelectionUI: React.FC<StoreSelectionProps> = ({ navigation }) => {
           <PremiumButton
             title="Lets get Started!"
             onPress={goToMealsOptions}
-            color="#f71735"
+            color="#2dd881"
           />
         </View>
       )}

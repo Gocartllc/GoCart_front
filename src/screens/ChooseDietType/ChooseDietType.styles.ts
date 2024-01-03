@@ -68,6 +68,7 @@ export const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign:'center',
     marginTop:65,
-    marginBottom:56
+    marginBottom:56,
+    color:"#353e4e"
   }
 });

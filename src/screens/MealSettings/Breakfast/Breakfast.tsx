@@ -70,7 +70,7 @@ const BreakfastScreen: React.FC<BreakfastScreenProps> = ({ navigation, route }) 
       <FontAwesome6
         name="clipboard-list"
         size={24}
-        color={open ? '#f4511e' : '#aaa'} // Change isFocused to open
+        color={open ? '#2dd881' : '#aaa'} // Change isFocused to open
         style={dropstyle.icon}
       />
       <DropDownPicker
@@ -122,7 +122,7 @@ const BreakfastScreen: React.FC<BreakfastScreenProps> = ({ navigation, route }) 
   <PremiumButton
     title="Continue"
     onPress={navigateToNextMeal}
-    color="#f71735"
+    color="#2dd881"
   />
 </View>
     </View>
@@ -183,10 +183,10 @@ const dropstyle = StyleSheet.create({
     zIndex: 1000
   },
   tickIcon: {
-    tintColor: '#f4511e',
+    tintColor: '#2dd881',
   },
   arrowIcon: {
-    tintColor: '#f4511e',
+    tintColor: '#2dd881',
   },
   placeholder: {
     color: '#aaa',

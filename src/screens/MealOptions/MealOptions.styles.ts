@@ -14,6 +14,7 @@ export const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    color:"#353e4e"
   },
   title: {
     fontSize: 24,
@@ -22,6 +23,7 @@ export const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign:'center',
     marginBottom: 10,
+    color:"#353e4e"
   },
   checkboxContainer: {
     flexDirection: 'column',

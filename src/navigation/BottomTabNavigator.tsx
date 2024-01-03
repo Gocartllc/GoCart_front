@@ -5,7 +5,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Profile from '@screens/Profile';
-import ShoppingCart from '@screens/ShoppingCart';
+import Shopping from '@screens/Shopping';
 import HealthStats from '@screens/HealthStats';
 import Dashboard from '@screens/Dashboard/Dashboard';
 
@@ -60,7 +60,7 @@ const BottomTabNavigator: React.FC = () => (
     >
     <Tab.Screen name="Home" component={Dashboard} />
     <Tab.Screen name="Profile" component={Profile} />
-    <Tab.Screen name="ShoppingCart" component={ShoppingCart} />
+    <Tab.Screen name="ShoppingCart" component={Shopping} />
     <Tab.Screen name="HealthStats" component={HealthStats} />
   </Tab.Navigator>
 );
