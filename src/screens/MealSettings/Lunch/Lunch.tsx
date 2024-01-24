@@ -6,7 +6,7 @@ import { styles } from './Lunch.styles';
 import { LunchProps } from './Lunch.types';
 import DropDownPicker from 'react-native-dropdown-picker';
 import Button from '@components/Button';
-import PremiumButton from '@components/PremiumButton';
+import PremiumButton from '@components/PremiumButton/PremiumButton';
 import PremiumTextField from '@components/PremiumTextField';
 import PremiumDropDownPicker from '@components/PremiumDropDownPicker';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';

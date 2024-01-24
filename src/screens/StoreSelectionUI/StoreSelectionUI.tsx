@@ -5,7 +5,7 @@ import { View, Text, TouchableOpacity, Image, FlatList } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { Store, StoreSelectionProps } from './StoreSelectionUI.types';
 import { styles } from './StoreSelectionUI.styles';
-import PremiumButton from '@components/PremiumButton';
+import PremiumButton from '@components/PremiumButton/PremiumButton';
 import { useSelectedMeals } from '../../context/SelectedMealsContext';
 
 const StoreSelectionUI: React.FC<StoreSelectionProps> = ({ navigation }) => {

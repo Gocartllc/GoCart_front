@@ -4,7 +4,7 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#fff',
+      backgroundColor: '#F1F6F7',
     },
     header: {
       flexDirection: 'row',
@@ -128,8 +128,8 @@ export const styles = StyleSheet.create({
       marginLeft: 8,
     },
     itemImage: {
-      width: 50, // adjust size as needed
-      height: 50, // adjust size as needed
+      width: 55, // adjust size as needed
+      height: 55, // adjust size as needed
       borderRadius: 25,
       backgroundColor: '#f0f0f0', // placeholder background color
     }

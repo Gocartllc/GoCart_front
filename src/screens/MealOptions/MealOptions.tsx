@@ -4,7 +4,7 @@ import { CheckBox } from 'react-native-elements';
 import { styles } from './MealOptions.styles';
 import { MealOptionsScreenProps } from './MealOptions.types';
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import PremiumButton from '@components/PremiumButton';
+import PremiumButton from '@components/PremiumButton/PremiumButton';
 import { useSelectedMeals } from '../../context/SelectedMealsContext';
 
 const MealOptions: React.FC<MealOptionsScreenProps> = ({ navigation }) => {

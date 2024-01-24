@@ -5,7 +5,7 @@ import { View, Text, Button, Image } from 'react-native';
 import { styles } from './ChooseDietType.styles';
 import {ChooseDietTypeProps } from './ChooseDietType.types'
 import DropDownPicker from 'react-native-dropdown-picker';
-import PremiumButton from '@components/PremiumButton';
+import PremiumButton from '@components/PremiumButton/PremiumButton';
 import { useSelectedMeals } from '../../context/SelectedMealsContext';
 
 

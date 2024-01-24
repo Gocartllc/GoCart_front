@@ -1,5 +1,7 @@
 export type RootStackParamList = {
-    Onboarding: any;  
+    Onboarding: undefined;  
+    Login: undefined;
+    UserDetails: undefined;
     StoreSelectionUI: { selectedMeals: { [key: string]: boolean } } | undefined;
     ChooseDietType: undefined | { selectedMeals: { [key: string]: boolean } };
     GenerateMeals: undefined;
@@ -11,4 +13,6 @@ export type RootStackParamList = {
     ShoppingCart: any;
     HealthStat: any;
     MainTab: undefined;
+    Recipe: undefined;
+    RecipeSearchPage: undefined;
   };

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, ScrollView, TouchableOpacity } from 'react-native';
 import { styles } from './GenerateMeals.styles';
 import { useSelectedMeals } from '../../context/SelectedMealsContext';
-import PremiumButton from '@components/PremiumButton';
+import PremiumButton from '@components/PremiumButton/PremiumButton';
 import { generateMealPlan } from '@api/MealPlanAPI';
 import { MealPlanRequest } from '@api/MealPlanAPI.types'
 

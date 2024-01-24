@@ -23,7 +23,7 @@ type Props = {
 export default class Onboarding extends Component<Props> {
 
   handleNavigateToStoreSelection = () => {
-    this.props.navigation.navigate('MainTab');
+    this.props.navigation.navigate('Login');
   };
 
   render() {

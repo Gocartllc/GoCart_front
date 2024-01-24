@@ -1,7 +1,7 @@
 // GenerateMeals.types.ts
 
 import { RouteProp } from '@react-navigation/native';
-import { RootStackParamList } from '@navigation/AppNavigator';
+import { RootStackParamList } from '@navigation/navigationStacktypes';
 import { StackNavigationProp } from '@react-navigation/stack';
 
 export interface GenerateMealsPageProps {

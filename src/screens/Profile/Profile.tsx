@@ -3,6 +3,7 @@ import { View, Text, TouchableOpacity} from 'react-native';
 import { Avatar } from '@rneui/themed';
 import { styles } from './Profile.styles';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import PremiumButton from '@components/PremiumButton/PremiumButton';
 
 const Profile = () => {
   return (
@@ -17,47 +18,40 @@ const Profile = () => {
         size={110}
         rounded
         containerStyle={{
-          borderColor: '#0B99C1',
+          borderColor: '#F1F6F7',
           borderStyle: 'solid',
           borderWidth: 2,
           
         }}
       >
         <Avatar.Accessory size={23} 
-        style={{ backgroundColor: '#0B99C1' }}
+        style={{ backgroundColor: '#2dd881' }}
         />
         </Avatar>
       <Text style={styles.text}>
         John Brown
       </Text>
-      <Text style={styles.rating}>
-      <MaterialCommunityIcons name={'star'} size={16} color={'white'}/>
-        5.0
-      </Text>
+
     </View>
     <View style={[styles.userInfo]}>
       <TouchableOpacity style={[styles.section, styles.sectionBackground]}>
-        <MaterialCommunityIcons name={'help-circle'} size={32} color={'#0B99C1'} />
+        <MaterialCommunityIcons name={'help-circle'} size={32} color={'#2dd881'} />
         <Text style={styles.space}>Help</Text>
       </TouchableOpacity>
       <TouchableOpacity style={[styles.section, styles.sectionBackground]}>
-        <MaterialCommunityIcons name={'cog'} size={32} color={'#0B99C1'} />
+        <MaterialCommunityIcons name={'cog'} size={32} color={'#2dd881'} />
         <Text style={styles.space}>Settings</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={[styles.section, styles.sectionBackground]}>
-        <MaterialCommunityIcons name={'wrench'} size={32} color={'#0B99C1'} />
-        <Text style={styles.space}>Services</Text>
       </TouchableOpacity>
     </View>
     <View style={styles.bar} />
 
 <View style={styles.list}>
   <TouchableOpacity style={styles.listItem}>
-    <MaterialCommunityIcons name={'information'} size={25} color={'#0B99C1'} />
+    <MaterialCommunityIcons name={'information'} size={25} color={'#2dd881'} />
     <Text style={styles.listItemText}>Legal</Text>
   </TouchableOpacity>
   <TouchableOpacity style={styles.listItem}>
-    <MaterialCommunityIcons name={'tag-multiple'} size={25} color={'#0B99C1'} />
+    <MaterialCommunityIcons name={'tag-multiple'} size={25} color={'#2dd881'} />
     <Text style={styles.listItemText}>Promotional Deals</Text>
   </TouchableOpacity>
 </View>
@@ -65,7 +59,11 @@ const Profile = () => {
       <View style={styles.separator} />
       <TouchableOpacity onPress={() => console.log("logout")}> 
         <View style={styles.account}> 
-          <Text style={{color:'#E2E2E2'}}>Logout</Text> 
+        <PremiumButton
+          title="Logout"
+          onPress={() => console.log("Logout")}
+          color="#2dd881"
+        />
         </View> 
       </TouchableOpacity> 
     </View>

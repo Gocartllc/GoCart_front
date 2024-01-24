@@ -10,7 +10,7 @@ const ShoppingCart: React.FC<Props> = ({
   onRepeat,
   onPay,
 }) => {
-  // Calculate the total amount
+  // Calculate the total amount 
   const total = items.reduce(
     (sum, item) => sum + item.price * item.quantity,
     0
@@ -46,7 +46,7 @@ const ShoppingCart: React.FC<Props> = ({
       <View style={styles.items}>
         {items.map((item, index) => (
           <View key={index} style={styles.itemRow}>
-            <Image source={{ uri: 'placeholder-image-url' }} style={styles.itemImage} />
+            <Image source={{ uri: item.imageUrl }} style={styles.itemImage} />
             <View style={styles.itemDetails}>
               <Text style={styles.itemName}>{item.name}</Text>
               <Text style={styles.itemPrice}>${item.price.toFixed(2)} - {item.quantity} items</Text>

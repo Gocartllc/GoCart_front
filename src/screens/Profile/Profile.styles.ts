@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 export const styles = StyleSheet.create({
 root: {
     flex: 1,
-    backgroundColor:'#0E0D0D'
+    backgroundColor:'#F1F6F7'
 },
 header: {
   alignItems: 'center',
@@ -22,7 +22,8 @@ section: {
 },
 space: {
   marginBottom: 3,
-  color:'#E2E2E2'
+  color:'#2E384D',
+  fontWeight:"bold"
 },
 separator: {
   backgroundColor: "transparent",
@@ -46,7 +47,7 @@ text: {
   paddingVertical: 20,
   fontSize: 25,
   fontWeight: 'bold',
-  color:'#E2E2E2'
+  color:'#2E384D'
 },
 rating:{
   fontSize: 16,
@@ -55,17 +56,12 @@ rating:{
   top:-21
 },
 sectionBackground: {
-    backgroundColor: '#1a1a1a',
-    borderRadius: 10,
     padding: 10,
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: '30%',
     margin: 10,
   },
   bar: {
     height: 2,
-    backgroundColor: '#0B99C1',
+    backgroundColor: '#2dd881',
     marginVertical: 20,
   },
   list: {
@@ -78,18 +74,15 @@ sectionBackground: {
   },
   listItemText: {
     marginLeft: 10,
-    color: '#E2E2E2',
+    color: '#2E384D',
     fontSize:17
   },
   account: {
-    textAlign: 'center', // <-- the magic
-    fontWeight: 'bold',
     fontSize: 20,
     borderRadius: 18,
     width: 120,
     left:-12,
     alignItems: "center",
-    backgroundColor: "#0B99C1",
     padding: 10
   },
 })

@@ -17,6 +17,7 @@ import StartButton from '@components/StartButton/StartButton';
 import AntDesign from 'react-native-vector-icons/AntDesign'; // Import AntDesign
 import { RootStackParamList } from '@navigation/navigationStacktypes';
 import { StackNavigationProp } from '@react-navigation/stack';
+import RecipeCard from '@components/RecipeCard';
 
 
 
@@ -24,20 +25,6 @@ type DashboardProps = {
   navigation: StackNavigationProp<RootStackParamList, 'MainTab'>;
 };
 
-
-const opportunities: Opportunity[] = [
-  { title: 'Meal Plans', value: 36, trend: 'down', trendPercentage: 17, fontaweicon: "book"},
-  { title: 'Recipes', value: 26, trend: 'up', trendPercentage: 0, fontaweicon: "book" },
-  { title: 'Shopping Cart', value: 17, trend: 'up', trendPercentage: 8, fontaweicon: "shopping-cart" },
-  { title: 'Health Stats', value: '300 cals consumed', trend: 'down', trendPercentage: 22, ionicon: "stats-chart" },
-];
-
-const bookings: Booking[] = [
-  { month: 'January', converted: 120000, lost: 30000 },
-  { month: 'February', converted: 85000, lost: 25000 },
-  { month: 'March', converted: 90000, lost: 20000 },
-  { month: 'April', converted: 160000, lost: 40000 },
-];
 
 
 const Dashboard = ({ navigation}: DashboardProps): React.JSX.Element => {
@@ -90,6 +77,35 @@ const Dashboard = ({ navigation}: DashboardProps): React.JSX.Element => {
       <ProgressCard title="Calories" value={500} limit={1200} />
     </View>
 
+    <Text style={[{paddingBottom:20}]}></Text>
+
+ <Text style={[styles.discoverMoreTitle,{paddingBottom:20}]}>Meal Plans</Text>
+<RecipeCard
+  dishName="Meal Itineraries"
+  timeEstimate="30 mins"
+  imagePath={require('../../images/mealplan.png')}
+  onPress={() => navigation.navigate('RecipeSearchPage')}
+  cardWidth={300}
+  cardPadding={15}
+  cardHeight={190}
+/>
+
+<Text style={[{paddingBottom:20}]}></Text>
+
+<Text style={[styles.discoverMoreTitle,{paddingBottom:20}]}>Recipes</Text>
+<RecipeCard
+  dishName="Lets get cooking!"
+  timeEstimate="30 mins"
+  imagePath={require('../../images/recipe.png')}
+  onPress={() => navigation.navigate('RecipeSearchPage')}
+  cardWidth={300} // custom width
+  cardPadding={15} // custom padding
+  cardHeight={190}
+/>
+
+<Text style={[{paddingBottom:15}]}></Text>
+
+
 <Text style={styles.discoverMoreTitle}>Discover More</Text>
 
 <TouchableOpacity style={styles.articleCard}>
@@ -100,7 +116,7 @@ const Dashboard = ({ navigation}: DashboardProps): React.JSX.Element => {
     />
   </View>
   <View style={styles.articleContent}>
-    <Text style={styles.articleTitle}>How Much Water do you need?</Text>
+    <Text style={styles.articleTitle}>How much water do you need?</Text>
     <View style={styles.interactions}>
       <Text style={styles.interactionText}><Ionicons name={"heart"} size={28} color={"#2dd881"} /> 5k</Text>
     </View>
@@ -116,7 +132,7 @@ const Dashboard = ({ navigation}: DashboardProps): React.JSX.Element => {
     />
   </View>
   <View style={styles.articleContent}>
-    <Text style={styles.articleTitle}>How Much Water do you need?</Text>
+    <Text style={styles.articleTitle}>What exercises are right for me?</Text>
     <View style={styles.interactions}>
     <Text style={styles.interactionText}><Ionicons name={"heart"} size={28} color={"#2dd881"} /> 5k</Text>
     </View>
@@ -127,15 +143,7 @@ const Dashboard = ({ navigation}: DashboardProps): React.JSX.Element => {
 
   
 
-<View style={{paddingTop:50}}>
 
-      <TouchableOpacity style={styles.section} onPress={() => console.log("Navigate to The Recipe")}>
-        <Text style={styles.subtitle}>Your Breakfast for Today:</Text>
-          <Text style={styles.content}>
-             Fried Rice with Honey Seared Tofu
-          </Text>
-      </TouchableOpacity>
- </View>
 
     </ScrollView>
   );
